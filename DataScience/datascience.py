@@ -26,14 +26,19 @@ print ('This shows median weight', medheight)
 df_swing = pd.read_csv('Voter_Registration_Data.csv')
 df_swing[['HD_CODE', 'HD_NAME', 'COUNT(V.ID)', 'PARTY']]
 print ('This shows output', df_swing)
-data_file = np.genfromtxt("data_file.txt")
 
-
-
-#x = np.sort(df_swing["dem_share"])
-#y = np.arrange(1, len(x)+1) /float(len(x))
+#This will display a histogram
 _ = plt.hist(df_swing['PARTY'])
 _ = plt.xlabel('asd')
 _ = plt.ylabel('dfasd')
-#plt.margin(0.02)
 plt.show()
+
+#This will display a line graph
+x = np.sort(df_swing["COUNT(V.ID)"])
+y = np.arange(1, len(x)+1) /len(x)
+plt.plot(x,y, marker='.',linestyle='none')
+_ = plt.xlabel('asd')
+_ = plt.ylabel('dfasd')
+plt.margins(0.02)
+plt.show()
+
