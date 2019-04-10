@@ -42,3 +42,15 @@ _ = plt.ylabel('dfasd')
 plt.margins(0.02)
 plt.show()
 
+#This will display a 2 line graph with different data
+x = np.sort(df_swing["COUNT(V.ID)"])
+y = np.arange(1, len(x)+1) /len(x)
+plt.plot(x,y, marker='.',linestyle='none')
+
+x = np.sort(df_swing["PARTY"])
+y = np.arange(1, len(x)+1) /len(x)
+plt.plot(x,y, marker='.',linestyle='none')
+_ = plt.xlabel('Rf')
+_ = plt.ylabel('Demo')
+plt.margins(0.02)
+plt.show()
